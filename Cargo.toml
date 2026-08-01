@@ -1,0 +1,21 @@
+[package]
+name = "rstat"
+version = "0.1.0"
+edition = "2024"
+license = "BSD-3-Clause"
+description = "Zero-allocation Linux system information display"
+authors = ["Joshua Finley"]
+
+[[bin]]
+name = "rstat"
+path = "src/main.rs"
+
+[dependencies]
+libc = "0.2"
+
+[profile.release]
+opt-level = "z"
+lto = true
+strip = true
+codegen-units = 1
+panic = "abort"
