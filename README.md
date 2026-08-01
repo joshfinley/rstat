@@ -50,7 +50,7 @@ Since `ufetch` has more features and is a shell script, it is obviously much slo
 But for fun, here's just how much:
 
 ```
-$ sudo perf stat -e cycles:u,cycles:k,instructions:u,instructions:k -r 500 ./rstat
+$ sudo perf stat -e cycles:u,cycles:k,instructions:u,instructions:k -r 500 ./ufetch
 <SNIP>
  Performance counter stats for './ufetch' (500 runs):
 
